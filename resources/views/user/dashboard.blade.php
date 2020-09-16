@@ -16,25 +16,25 @@ Dashboard
                             <thead>
                                 <tr>
                                     <th class="text-center" style="width:15%">Rut</th>
-                                    <th class="text-center">Name</th>
-                                    <th class="text-center" style="width:30%">Email</th>
-                                    <th class="text-center" style="width:15%">Phone</th>
-                                    <th class="text-center" style="width:10%">Status</th>
+                                    <th class="text-center">Nombre</th>
+                                    <th class="text-center" style="width:30%">Correo</th>
+                                    <th class="text-center" style="width:15%">Teléfono</th>
+                                    <th class="text-center" style="width:10%">Confirmado</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr ng-if="users.length > 0" ng-repeat="(index, user) in users">
-                                    <td class="text-center">@{{ user.rut }}</th>
-                                    <td class="text-center">@{{ user.name }}</th>
-                                    <td class="text-center">@{{ user.email }}</th>
-                                    <td class="text-center">@{{ user.phone }}</th>
+                                    <td class="text-center">@{{ user.rut }}</td>
+                                    <td class="text-center">@{{ user.name }}</td>
+                                    <td class="text-center">@{{ user.email }}</td>
+                                    <td class="text-center">@{{ user.phone }}</td>
                                     <td class="text-center">
-                                        <span ng-if="user.confirmed == 1" class="text-success">Yes</span>
-                                        <span ng-if="user.confirmed != 1" class="text-danger">No</span>
+                                        <span ng-if="user.confirmed == 1" class="text-success">SI</span>
+                                        <span ng-if="user.confirmed != 1" class="text-danger">NO</span>
                                     </td>                                    
                                 </tr>
                                 <tr ng-if="users.length == 0">
-                                    <td colspan="5" class="text-center">No records found</td>
+                                    <td colspan="5" class="text-center">No se encontraron registro</td>
                                 </tr>
                             </tbody>
                         </table>
